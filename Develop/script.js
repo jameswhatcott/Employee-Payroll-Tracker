@@ -4,17 +4,27 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 function collectEmployees () {
   // TODO: Get user input to create and return an array of employee objects
-  let firstName = prompt("Employee's Fist Name", "John");
-  let lastName = prompt("Employee's Last Name", "Maxwell");
-  let salary = prompt("Employee's salary");
-  if (isNaN(salary)) {
-    return salary = prompt("Enter valid number");
+  while (true) {
+  firstName = prompt("Employee's Fist Name");
+  lastName =  prompt("Employee's Last Name");
+  salary = prompt("Employee's salary");
+  
+    if (firstName === null || 
+        lastName === null || 
+        salary === null) {
+      break;
+    }
+  }
+
+  if (isNaN(employee.salary)) {
+    return employee.salary = prompt("Enter valid number");
   } 
   document.getElementById("employee-table").innerHTML = firstName;
   document.getElementById("employee-table").innerHTML = lastName;
 
-}
 
+
+}
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
