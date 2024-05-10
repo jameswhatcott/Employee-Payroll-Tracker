@@ -7,9 +7,12 @@ function collectEmployees () {
   let firstName = prompt("Employee's Fist Name", "John");
   let lastName = prompt("Employee's Last Name", "Maxwell");
   let salary = prompt("Employee's salary");
+  if (isNaN(salary)) {
+    return salary = prompt("Enter valid number");
+  } 
   document.getElementById("employee-table").innerHTML = firstName;
   document.getElementById("employee-table").innerHTML = lastName;
-  
+
 }
 
 // Display the average salary
