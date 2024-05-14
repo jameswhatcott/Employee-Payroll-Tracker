@@ -11,12 +11,22 @@ function collectEmployees () {
   const lastName =  prompt("Employee's Last Name");
   const salary = prompt("Employee's salary");
   
-    if (firstName === null || 
-        lastName === null || 
-        salary === null) {
-      break;
+    if (firstName === null) {
+      break
     }
-  const employee = {firstName:firstName,lastName:lastName, salary:salary};
+      if (lastName === null) {
+        break
+      }
+        if (salary === null) {
+          break
+        }
+
+  const employee = {
+      firstName:firstName,
+      lastName:lastName, 
+      salary:salary
+    };
+
     if (isNaN(employee.salary)) {
       return employee.salary = prompt("Enter valid number");
     } 
@@ -38,15 +48,24 @@ function collectEmployees () {
     
   }
 
-
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+employees.salary
+
+
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
   // TODO: Select and display a random employee
+
+  //1. select a random array integer
+  //2. display that into the console.log
+
+  const random = employeesArray[Math.floor(Math.random() * employeesArray.length)];
+  console.log(random);
+  return random;
 
 }
 
