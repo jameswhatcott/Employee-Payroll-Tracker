@@ -51,7 +51,9 @@ function collectEmployees () {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
-employees.salary
+// 1. get the sum of all the salaries in all objects
+// 2. get the number of values in the array
+// 3. divide the sum by the number of values in the array (length)
 
 
 }
