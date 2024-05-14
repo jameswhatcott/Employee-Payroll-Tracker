@@ -4,8 +4,9 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 function collectEmployees () {
   // TODO: Get user input to create and return an array of employee objects
-  const employees = []
-  while (true) {
+  let wantMoreEmployees = true;
+  const employees = [];
+  while (wantMoreEmployees) {
   const firstName = prompt("Employee's First Name");
   const lastName =  prompt("Employee's Last Name");
   const salary = prompt("Employee's salary");
@@ -26,9 +27,10 @@ function collectEmployees () {
     
     wantMoreEmployees = confirm('Do you want to add more?')
 
-    if(!wantMoreEmployees) {
-      break
+    if (!wantMoreEmployees) {
+      break;
     }
+
       
     }
     
@@ -103,7 +105,7 @@ const trackEmployeeData = function() {
   employees.sort(function(a,b) {
     if (a.lastName < b.lastName) {
       return -1;
-    } else {
+    } else 
       return 1;
     }
   });
