@@ -108,7 +108,7 @@ const trackEmployeeData = function() {
     } else 
       return 1;
     }
-  });
+  );
 
   displayEmployees(employees);
 }
