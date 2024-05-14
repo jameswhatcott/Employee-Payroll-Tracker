@@ -105,10 +105,10 @@ const trackEmployeeData = function() {
   employees.sort(function(a,b) {
     if (a.lastName < b.lastName) {
       return -1;
-    } else 
+    } else {
       return 1;
     }
-  );
+  });
 
   displayEmployees(employees);
 }
