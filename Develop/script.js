@@ -11,15 +11,17 @@ function collectEmployees() {
     const lastName = prompt("Employee's Last Name");
     const salary = prompt("Employee's salary");
 
-    //  //   if (firstName === null) {
-    //    //   break
-    //   //  }
-    //   //    if (lastName === null) {
-    //    /     break
-    //       }
-    //         if (salary === null) {
-    //           break
-    //         }
+    if (firstName === null) {
+      break
+    }
+
+    if (lastName === null) {
+      break
+    }
+    if (salary === null) {
+      break
+    }
+
 
     const employee = {
       firstName: firstName,
@@ -55,11 +57,11 @@ const displayAverageSalary = function (employeesArray) {
   // 2. get the number of values in the array
   // 3. divide the sum by the number of values in the array (length)
 
-  const totalsalary = 0;
+  let totalsalary = 0;
   for(i = 0; i < employeesArray.length; i++) {
     totalsalary += employeesArray[i].salary
   }
-console.log(totalsalary/employeesArray.length);
+console.log("Average Salary: $" + totalsalary/employeesArray.length);
   
 }
 
